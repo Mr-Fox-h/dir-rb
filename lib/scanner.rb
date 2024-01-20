@@ -6,7 +6,7 @@ class Scanner
     @cust_target_site = target_site
   end
 
-  def scan(status_code, file_name = '/usr/share/dnsmap/wordlist_TLAs.txt')
+  def scan(status_code, file_name)
     item_found = []
 
     if status_code == 200
