@@ -7,11 +7,11 @@ OptionParser.new do |opts|
 
   # NOTE: address
   opts.on("-a", "--address NAME", "Site") do |site_address|
-    puts "\n===============================================\n"
+    puts "\n========== Target URL: #{site_address} ==========\n"
     puts Time.now.asctime
     target = Scanner.new("#{site_address}")
     code = target.test
-    puts "==============================================="
+    puts "\n========= Scanning URL: #{site_address} =========\n"
     target.scan(code)
   end
 
